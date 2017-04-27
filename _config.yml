@@ -1,8 +1,21 @@
+# Site
+title: Athena
+subtitle: Beautful Hexo Theme
+description:
+author: Frye Lee
+language:
+
 # Default post title
 default_post_title: Halo
 
 #Date Format
 date_format: YYYY-MM-DD
+
+# Menu
+menu:
+  Home: /
+  About: /about
+rss: /atom.xml
 
 # Comment. 
 comments:

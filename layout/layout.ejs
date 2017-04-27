@@ -1,0 +1,16 @@
+<%- partial('_partial/head') %>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main">
+            <% page.posts.forEach(function(item, index) { %>
+                <h1> <%- item.title %></h1>
+            <% }); %>
+        </section>
+      </div>
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    </div>
+  </div>
+</body>
+</html>

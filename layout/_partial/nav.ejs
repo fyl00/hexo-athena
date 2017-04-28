@@ -1,20 +1,22 @@
-    <!-- Start Top Bar -->
-    <div class="top-bar">
-      <div class="top-bar-left">
+<!-- Start Top Bar -->
+<div class="top-bar">
+    <div class="row">
+        <div class="top-bar-left">
         <ul class="menu">
-          <li class="menu-text"><%- config.author %></li>
+            <li class="menu-text"><%- config.author %></li>
         </ul>
-      </div>
-      <div class="top-bar-right">
+        </div>
+        <div class="top-bar-right">
         <ul class="menu">
-
-          <% for (var i in theme.menu){ %>
-          <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a><li>
-          <% } %>
-          <% if (theme.rss){ %>
-          <li><a href="<%- theme.rss %>" title="<%= __('rss_feed') %>">RSS</a></li>
-          <% } %>
+        
+            <% for (var i in theme.menu){ %>
+            <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a><li>
+            <% } %>
+            <% if (theme.rss){ %>
+            <li><a href="<%- theme.rss %>" title="<%= __('rss_feed') %>">RSS</a></li>
+            <% } %>
         </ul>
-      </div>
+        </div>
     </div>
-    <!-- End Top Bar -->
+</div>
+<!-- End Top Bar -->

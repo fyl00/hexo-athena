@@ -1,11 +1,10 @@
-<footer id="footer">
-  <% if (theme.sidebar === 'bottom'){ %>
-    <%- partial('_partial/sidebar') %>
-  <% } %>
+<footer class="center">
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; <%= date(new Date(), 'YYYY') %> <a href="https://slowwalker.me" target="_blank">SlowWalker</a><br>
       <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <span> | <span>
+       <%= __('theme') %> <a href="http://slowwalker.me" target="_blank">Athena</a>
     </div>
   </div>
 </footer>

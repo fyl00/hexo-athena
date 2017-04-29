@@ -1,17 +1,22 @@
 <%- partial('_partial/head') %>
 <body>
+  <div class="wrapper">
   <%- partial('_partial/nav', null, {cache: !config.relative_link}) %>
-  <div id="container">
-    <div id="wrap">
-      <div class="row">
-        <section id="main">
+      <div id="container" class="row">
+        <div id="post-list">
             <% page.posts.forEach(function(item, index) { %>
-                <h3> <%- item.title %></h3>
+            <section id="post-preview">
+              <a href="<%- item.path%>">
+                  <h3> <%- item.title %></h3>
+              </a>
+            </section>
             <% }); %>
-        </section>
+        </div>
+        <div class="push"></div>
       </div>
-      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     </div>
-  </div>
+
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+
 </body>
 </html>

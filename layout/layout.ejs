@@ -12,6 +12,12 @@
             </section>
             <% }); %>
         </div>
+
+        <!-- Pagination -->
+    <% if (page.prev || page.next){ %>
+        <%- partial('_partial/pagination') %>
+    <% } %>
+
         <div class="push"></div>
       </div>
     </div>

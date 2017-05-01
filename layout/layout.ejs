@@ -9,7 +9,13 @@
               <a href="<%- item.path%>">
                   <h3> <%- item.title %></h3>
               </a>
+              <span> <%- item.date.format(theme.date_format) %> </span>
+              <!-- tag -->
+              <% item.tags.forEach(function(tag) {%> 
+                <span> <%- tag.name %> </span>
+              <% });%>
             </section>
+
             <% }); %>
         </div>
 

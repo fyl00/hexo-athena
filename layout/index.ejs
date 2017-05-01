@@ -1,0 +1,28 @@
+<div id="post-list">
+    <% var last; %>
+    <% page.posts.forEach(function(item, index) { %>
+        <!-- Date Index -->
+        <% var year = item.date.year();
+            if (last != year){%>
+            <p id="year"> <%= year %> </p>
+            <% last = year;}
+        %>
+
+    <section id="post-preview">
+        <a href="<%- config.root %><%- item.path%>">
+            <h3> <%- item.title %></h3>
+        </a>
+        <span> <%- item.date.format(theme.date_format) %> </span>
+        <!-- Tag -->
+        <% item.tags.forEach(function(tag) {%> 
+        <span> <%- tag.name %> </span>
+        <% });%>
+    </section>
+
+    <% }); %>
+</div>
+
+        <!-- Pagination -->
+    <% if (page.prev || page.next){ %>
+        <%- partial('_partial/pagination') %>
+    <% } %>

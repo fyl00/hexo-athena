@@ -2,35 +2,9 @@
 <body>
   <div class="wrapper">
   <%- partial('_partial/nav', null, {cache: !config.relative_link}) %>
-      <div id="container" class="row">
-        <div id="post-list">
-            <% var last; %>
-            <% page.posts.forEach(function(item, index) { %>
-              <!-- Date Index -->
-              <% var year = item.date.year();
-                 if (last != year){%>
-                   <p id="year"> <%= year %> </p>
-                   <% last = year;}
-              %>
+    <div id="container" class="row">
 
-            <section id="post-preview">
-              <a href="<%- item.path%>">
-                  <h3> <%- item.title %></h3>
-              </a>
-              <span> <%- item.date.format(theme.date_format) %> </span>
-              <!-- Tag -->
-              <% item.tags.forEach(function(tag) {%> 
-                <span> <%- tag.name %> </span>
-              <% });%>
-            </section>
-
-            <% }); %>
-        </div>
-
-        <!-- Pagination -->
-    <% if (page.prev || page.next){ %>
-        <%- partial('_partial/pagination') %>
-    <% } %>
+  <%- body %>
 
         <div class="push"></div>
       </div>

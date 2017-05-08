@@ -10,6 +10,16 @@ global-reset()
 html, body
   height: 100%
 
+@font-face
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  src: url(font-icon-path + ".eot?v=#" + font-icon-version)
+  src: url(font-icon-path + ".eot?#iefix&v=#" + font-icon-version) format("embedded-opentype"),
+       url(font-icon-path + ".woff?v=#" + font-icon-version) format("woff"),
+       url(font-icon-path + ".ttf?v=#" + font-icon-version) format("truetype"),
+       url(font-icon-path + ".svg#fontawesomeregular?v=#" + font-icon-version) format("svg")
+
 #container
   // margin 3.33rem auto
   padding: 1rem 1.75rem
@@ -63,5 +73,38 @@ article
   font-size: 1.75rem
   width : 100%
 
+.article-share-box
+  width: 100%
+  height: 36px
+  margin: 1.75rem auto
+  border-top: 1px solid color-clouds-grey
+  p
+    margin: 0.15rem 0.5rem
+    float:right
+    line-height: 2.75rem
+    
 
-  
+
+$article-share-link
+  width: 3rem
+  height: 2.75rem
+  display: block
+  float: right
+  position: relative
+  color: #999
+  text-shadow: 0 1px #fff
+  &:before
+    font-size: 2.5rem
+    font-family: font-icon
+    absolute-center(@font-size)
+    text-align: center
+  &:hover
+    color: #fff
+
+.article-share-twitter
+  @extend $article-share-link
+  &:before
+    content: "\f099"
+  &:hover
+    background: color-twitter
+    text-shadow: 0 1px darken(color-twitter, 20%)

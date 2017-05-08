@@ -26,7 +26,8 @@
         <%- post.content %>
       <% } %>
     </div>
-    <div class="article-share">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">SHARE FUNCTION ERA</a>
+    <div class="article-share-box">
+      <a href="#" data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-twitter" target="_blank" title="Twitter"></a>
+      <p><%= __('share') %></p>
     </div>
   </article>
